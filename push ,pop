@@ -1,0 +1,54 @@
+import 'package:flutter/material.dart';
+import 'package:untitled1/flutter_class%201.dart';
+
+
+class Navi extends StatelessWidget {
+  final String Name;
+  const Navi({super.key, required this.Name});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('home page'),
+        centerTitle: true,
+        backgroundColor: Colors.greenAccent,
+      ),
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Text(Name,style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.red,
+                ),),
+                ElevatedButton(onPressed:(){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder:(context) => Home()),
+                  );
+                }, child: Text('Home')),
+
+                SizedBox(
+                  height: 30,
+                ),
+
+                ElevatedButton(onPressed:(){
+                  Navigator.pop(context);
+
+
+                }, child: Text('Back')),
+
+              ],
+            ),
+
+          ],
+        ),
+      ),
+
+    );
+  }
+}
