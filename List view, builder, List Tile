@@ -20,7 +20,8 @@ class ListV extends StatelessWidget {
             child: ListTile(
               leading: Icon(Icons.phone),
               trailing: Icon(Icons.delete),
-              title: Text('01761122277 $index'),
+              title:Text('Liton'),
+              subtitle: Text('01761122277 $index'),
             ),
           );
         },
@@ -30,4 +31,5 @@ class ListV extends StatelessWidget {
     );
   }
 }
+
 
